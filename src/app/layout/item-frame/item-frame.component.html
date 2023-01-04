@@ -1,0 +1,10 @@
+<div class="item-frames">
+  <div class="center-div">
+    <div *ngFor="let item of itemsFromDb" class="item">
+      <h1>{{item.name}}</h1>
+      <div class="item-placeholder-image"><img src="assets/images/placeholder.png" alt="Placeholder image."></div>
+      <p id="price">Price: €{{item.price}}</p>
+      <p id="urgency">{{item.stockUrgency}}</p>
+    </div>
+  </div>
+</div>
