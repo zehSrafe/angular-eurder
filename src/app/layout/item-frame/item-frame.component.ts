@@ -21,9 +21,9 @@ export class ItemFrameComponent implements OnInit {
 
   getItems(): void {
     // this.itemService.getItems().subscribe(items => this.itemsFromDb = items);
-    this.itemService.getItems().pipe(
-      map(item => (Math.round(item.price * 100) / 100).toFixed(2))
-    ).subscribe(items => this.itemsFromDb = items);
+    this.itemService.getItems()
+      // .pipe(map(item => (Math.round(item.price * 100) / 100).toFixed(2)))
+      .subscribe(items => this.itemsFromDb = items);
 
 
     //
